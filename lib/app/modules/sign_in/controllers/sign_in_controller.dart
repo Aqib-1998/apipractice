@@ -18,11 +18,6 @@ class SignInController extends GetxController {
     super.onReady();
   }
 
-  int setCurrentNumber({required int number}) {
-    count.value = number;
-    return count.value;
-  }
-
   UserModel setCurrentUser({required UserModel userModel}) {
     currentUser = userModel;
     return currentUser;
@@ -37,7 +32,6 @@ class SignInController extends GetxController {
     for (int i = 0; i < dataFromApi.length; i++) {
       _userData.add(UserModel.fromMap(dataFromApi[i]));
     }
-
     List<UserModel> userData = _userData;
     return userData;
   }

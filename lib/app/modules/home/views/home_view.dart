@@ -1,3 +1,4 @@
+import 'package:api_integration/app/modules/gallery_view/views/gallery_view_view.dart';
 import 'package:api_integration/app/modules/sign_in/controllers/sign_in_controller.dart';
 import 'package:api_integration/app/views/views/profile_view.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,11 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+          onPressed: () => Get.to(() => GalleryViewView()),
+          child: Center(
+            child: Icon(Icons.picture_in_picture),
+          )),
       appBar: AppBar(
         actions: [
           TextButton(

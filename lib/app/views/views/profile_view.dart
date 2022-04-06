@@ -7,7 +7,7 @@ class ProfileView extends GetView {
   SignInController signInController = Get.find<SignInController>();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold( 
       appBar: AppBar(
         title: Text('Profile'),
         centerTitle: true,
@@ -21,7 +21,7 @@ class ProfileView extends GetView {
             trailing: Text(signInController.currentUser.name),
           ),
           ListTile(
-            leading: Text("UserName: "),
+            leading: Text("UserName: "), 
             trailing: Text(signInController.currentUser.username),
           ),
           ListTile(
